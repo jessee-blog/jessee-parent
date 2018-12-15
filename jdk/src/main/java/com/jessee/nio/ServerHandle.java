@@ -14,7 +14,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * Created by helo on 2018/12/2.
+ * Created by jessee on 2018/12/2.
  */
 public class ServerHandle implements Runnable {
 
@@ -55,7 +55,7 @@ public class ServerHandle implements Runnable {
         while (started) {
             try {
                 //无论是否有读写事件发生，selector每隔1s被唤醒一次
-                selector.select();
+                selector.select(1000);
                 //阻塞,只有当至少一个注册的事件发生的时候才会继续.
                 Set<SelectionKey> keys = selector.selectedKeys();
                 Iterator<SelectionKey> it = keys.iterator();
