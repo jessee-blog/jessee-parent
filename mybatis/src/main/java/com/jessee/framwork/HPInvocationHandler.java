@@ -22,6 +22,7 @@ public class HPInvocationHandler implements InvocationHandler {
         String key = method.getDeclaringClass().getName() + "." + method.getName();
         System.out.println("key:" + key);
         String sql = hpSession.getSqlMap().get(key);
+        System.out.println(String.format("SQL [ %s ], parameter [%s] ", sql, args[0]));
         Object result = hpSession.selectOne(sql, args[0]);
         return result;
     }

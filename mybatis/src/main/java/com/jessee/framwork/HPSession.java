@@ -9,11 +9,11 @@ import java.util.Map;
  */
 public class HPSession {
 
-    //sql
+    //sql 根据配置获取mapper，将包含注解的方法解析为sql和key存入map
     private Map<String, String> sqlMap = new HashMap<>();
 
     public HPSession() {
-        sqlMap.put("com.jessee.UserMapper.selectUserById", "INSERT INTO `test`.`t_user` (`age`, `name`) VALUES (?, ?)");
+        sqlMap.put("com.jessee.dao.UserMapper.selectUserById", "INSERT INTO `test`.`t_user` (`age`, `name`) VALUES (?, ?)");
     }
 
     //excutor

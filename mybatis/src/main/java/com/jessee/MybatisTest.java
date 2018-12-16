@@ -1,5 +1,6 @@
 package com.jessee;
 
+import com.jessee.dao.UserMapper;
 import com.jessee.framwork.HPSession;
 import org.junit.Test;
 

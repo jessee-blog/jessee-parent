@@ -13,12 +13,8 @@
     <module>springmvc</module>
     <module>jdk</module>
     <module>web</module>
-      <module>mybatis</module>
-      <module>mybatis</module>
-      <module>mybatis</module>
-      <module>mybatis</module>
-      <module>mybatis</module>
-      <module>mybatis</module>
+    <module>mybatis</module>
+    <module>bloomfilter</module>
   </modules>
 
   <name>jessee-parent</name>
