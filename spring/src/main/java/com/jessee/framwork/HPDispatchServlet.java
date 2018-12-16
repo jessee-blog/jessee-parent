@@ -1,6 +1,8 @@
 package com.jessee.framwork;
 
 import ch.qos.logback.classic.Logger;
+import com.alibaba.fastjson.JSONObject;
+import com.jessee.framwork.annotition.HPResponseBody;
 import com.jessee.framwork.context.HPApplitionContext;
 import com.jessee.framwork.context.HPHandler;
 import org.slf4j.LoggerFactory;
@@ -77,7 +79,10 @@ public class HPDispatchServlet extends HttpServlet {
 
             Object res = method.invoke(hpHandler.getController(), requestParams);
 
-            System.out.println("res==>" + res);
+            if (method.isAnnotationPresent(HPResponseBody.class)) {
+                res = JSONObject.toJSONString(res);
+            }
+            System.out.println("res==>" + res.toString());
 
             Writer writer = resp.getWriter();
             writer.write(res.toString());

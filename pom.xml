@@ -13,6 +13,12 @@
     <module>springmvc</module>
     <module>jdk</module>
     <module>web</module>
+      <module>mybatis</module>
+      <module>mybatis</module>
+      <module>mybatis</module>
+      <module>mybatis</module>
+      <module>mybatis</module>
+      <module>mybatis</module>
   </modules>
 
   <name>jessee-parent</name>
@@ -81,6 +87,20 @@
       <version>3.1.0</version>
       <scope>provided</scope>
     </dependency>
+      <!--fastjson-->
+      <dependency>
+          <groupId>com.alibaba</groupId>
+          <artifactId>fastjson</artifactId>
+          <version>1.2.47</version>
+      </dependency>
+      <!--mysql-->
+      <dependency>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+          <version>8.0.11</version>
+      </dependency>
+
+
   </dependencies>
 
   <build>
